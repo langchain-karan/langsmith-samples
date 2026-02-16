@@ -78,6 +78,21 @@ flowchart TD
 - Optional path: `Deep Agent refinement` in investigation/compliance when `ENABLE_DEEPAGENTS=true`
 - Model tiers: Haiku (escalation triage), Sonnet 4.5 (default drafting), Opus (high-risk drafting/refinement)
 
+## AWS Architecture Diagram
+
+![Fraud Detection AWS Architecture](../../generated-diagrams/fraud-detection-aws-architecture.png)
+
+Generated using `awslabs.aws-diagram-mcp-server`.
+This diagram follows the LangSmith AWS self-hosted reference pattern, with `LangSmith Deployments` and the `LangGraph` runtime inside the customer VPC, and direct per-agent calls from each LangGraph stage to Amazon Bedrock.
+It is structured against the AWS Well-Architected Framework pillars:
+
+- **Operational excellence**: CloudWatch and X-Ray for workload telemetry and run-time operations.
+- **Security**: WAF, IAM roles, KMS encryption, and Secrets Manager for workload protection.
+- **Reliability**: Route 53 health checks and SQS DLQ/replay path for failure handling.
+- **Performance efficiency**: Auto Scaling and Compute Optimizer for right-sized throughput.
+- **Cost optimization**: AWS Budgets to enforce spend controls for model and data services.
+- **Sustainability**: Compute Optimizer and elastic scaling to reduce over-provisioned resources.
+
 ## AWS Services Used (Reference Architecture)
 
 This sample executes locally, but each stage maps to AWS-native services for production deployment.
