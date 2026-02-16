@@ -3,12 +3,23 @@
 <p align="center">
   <a href="./LICENSE"><img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License: MIT"></a>
   <a href="https://github.com/langchain-karan/langsmith-samples/stargazers"><img src="https://img.shields.io/github/stars/langchain-karan/langsmith-samples?style=social" alt="GitHub stars"></a>
+  <a href="https://github.com/langchain-karan/langsmith-samples/commits/main"><img src="https://img.shields.io/github/commit-activity/m/langchain-karan/langsmith-samples" alt="Commit activity"></a>
+  <a href="https://github.com/langchain-karan/langsmith-samples/pulls"><img src="https://img.shields.io/github/issues-pr/langchain-karan/langsmith-samples" alt="Pull requests"></a>
   <a href="https://x.com/LangChainAI"><img src="https://img.shields.io/twitter/follow/LangChainAI?style=social" alt="Follow LangChain"></a>
 </p>
 
 Production-style sample projects that show how to build, operate, and evaluate AI workflows with LangSmith and LangChain.
 
 This repository is built for teams moving from prototype to production. Each sample models a real business workflow and demonstrates implementation patterns you can adapt to your own stack.
+
+## Documentation & SDK Links
+
+- LangChain docs: https://docs.langchain.com/oss/python/langchain/
+- LangChain Python API reference: https://reference.langchain.com/python/
+- LangGraph docs: https://docs.langchain.com/oss/python/langgraph/
+- Deep Agents overview: https://docs.langchain.com/oss/python/deepagents/overview
+- Deep Agents Python API reference: https://reference.langchain.com/python/deepagents/
+- LangSmith docs: https://docs.smith.langchain.com/
 
 ## Who This Is For
 
