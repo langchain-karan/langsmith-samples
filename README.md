@@ -1,4 +1,5 @@
-<h1 align="center"><img src="assets/LangSmith-logo@2x.jpg" alt="LangSmith" height="36" style="vertical-align: middle;"> Samples</h1>
+<h1 align="center"><img src="assets/LangSmith-logo@2x.jpg" alt="LangSmith" height="36" style="vertical-align: middle;"></h1>
+<p align="center">Solution samples for industry verticals</p>
 
 <p align="center">
   <a href="./LICENSE"><img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License: MIT"></a>
