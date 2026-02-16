@@ -49,6 +49,35 @@ fraud-detection-agent/
 └── run_demo.py
 ```
 
+## High-Level Architecture
+
+```mermaid
+flowchart TD
+    E[Transaction Events] --> M[Monitor Stage]
+    M --> A[Anomaly Scoring]
+    A --> EN[Risk Enrichment]
+    EN --> IS[Investigation Stage]
+    IS --> SW[Swarm Subgraph: temporal + geo + network]
+    SW --> RS[Risk Recompute]
+    RS --> C[Compliance Stage + SAR Draft]
+    C --> MS{Model Strategy}
+    MS --> H[Haiku: escalation classification]
+    MS --> SO[Sonnet 4.5: default SAR drafting]
+    MS --> O[Opus: high-risk SAR drafting]
+    C --> DA{Deep Agents enabled?}
+    DA -->|Yes| DR[Deep Agent refinement: investigation/SAR]
+    DA -->|No| CL[Core LCEL + deterministic path]
+    DR --> ES[Escalation + Disposition]
+    CL --> ES
+    ES --> N[Alerts/Case Routing]
+    N --> LS[LangSmith traces + audit log]
+```
+
+**Legend**
+- Default path: `Monitor -> Enrich -> Investigate/Swarm -> Compliance -> Escalation`
+- Optional path: `Deep Agent refinement` in investigation/compliance when `ENABLE_DEEPAGENTS=true`
+- Model tiers: Haiku (escalation triage), Sonnet 4.5 (default drafting), Opus (high-risk drafting/refinement)
+
 ## AWS Services Used (Reference Architecture)
 
 This sample executes locally, but each stage maps to AWS-native services for production deployment.

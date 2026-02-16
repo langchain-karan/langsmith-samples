@@ -26,6 +26,32 @@ document-research-agent/
     └── state.py
 ```
 
+## High-Level Architecture
+
+```mermaid
+flowchart TD
+    U[User Query] --> I[Intake + Route Classification]
+    I --> R[Retriever: Local docs or OpenSearch]
+    R --> C[Context Builder + Citation Assembly]
+    C --> S[Synthesis Layer]
+    S --> M{Model Strategy}
+    M --> H[Haiku: route/fast tasks]
+    M --> SO[Sonnet 4.5: default synthesis]
+    M --> O[Opus: complex comparative/regulatory]
+    S --> D{Deep Agents enabled?}
+    D -->|Yes| DA[Deep Agent for complex synthesis]
+    D -->|No| L[LCEL synthesis chain]
+    DA --> Q[Quality Gate: confidence + review decision]
+    L --> Q
+    Q --> F[Final Cited Response]
+    F --> LS[LangSmith traces/observability]
+```
+
+**Legend**
+- Default path: `Intake -> Retrieve -> LCEL Synthesis -> Quality Gate -> Final Response`
+- Optional path: `Deep Agent for complex synthesis` when `ENABLE_DEEPAGENTS=true`
+- Model tiers: Haiku (routing), Sonnet 4.5 (default synthesis), Opus (highest complexity)
+
 ## Quick Start
 
 ```bash
