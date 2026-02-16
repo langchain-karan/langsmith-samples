@@ -119,6 +119,77 @@ This sample executes locally, but each stage maps to AWS-native services for pro
 5. Publish high-risk alerts to SNS and drive approvals with Step Functions.
 6. Store case artifacts and SAR outputs in DynamoDB/S3 with CloudWatch observability.
 
+## LangSmith Observability and Evaluations
+
+Use LangSmith to monitor each fraud case end-to-end and measure whether escalation and SAR outputs are improving over time.
+
+### 1) Enable tracing for this sample
+
+Set these variables before running:
+
+```bash
+export LANGSMITH_TRACING=true
+export LANGSMITH_API_KEY=your_langsmith_api_key
+export LANGSMITH_PROJECT=fraud-detection-agent
+```
+
+Then run the sample as usual:
+
+```bash
+python run_demo.py --json
+```
+
+### 2) What to inspect in traces
+
+For each run, validate:
+
+- **Workflow progression**: `monitor -> enrich -> investigate -> comply -> escalate` completes with no skipped stage.
+- **Model routing correctness**: Haiku/Sonnet/Opus choice matches case severity and complexity.
+- **Tool/data usage**: enrichment and graph checks use expected sources and produce consistent case context.
+- **Escalation reasoning quality**: high-risk decisions include clear, auditable explanation.
+- **Latency and cost hotspots**: identify slow or expensive stages, especially investigation and SAR drafting.
+
+Recommended trace metadata/tags for filtering:
+
+- `case_id`, `risk_level`, `escalation_required`
+- `model_tier` (`haiku`, `sonnet`, `opus`)
+- `deepagents_enabled` (`true`/`false`)
+- `workflow_version`
+
+### 3) Build an evaluation dataset for this use case
+
+Create a dataset of representative financial scenarios, for example:
+
+- Low-risk normal activity (should not escalate)
+- Medium-risk unusual behavior (needs investigation, may not escalate)
+- High-risk patterns (must escalate, requires strong SAR narrative)
+- Edge cases (missing fields, conflicting signals, noisy inputs)
+
+Store expected outcomes per case:
+
+- Expected `risk_level`
+- Expected `escalation_required`
+- Expected SAR quality criteria (coverage of parties, timeline, and rationale)
+
+### 4) Suggested evaluation metrics
+
+Track metrics that map to AML operations:
+
+- **Escalation precision/recall** (avoid false negatives and false positives)
+- **Risk classification accuracy** (low/medium/high correctness)
+- **SAR narrative quality** (completeness, factual grounding, actionability)
+- **Latency per stage** and **end-to-end runtime**
+- **Token/cost per run**, segmented by model tier
+
+### 5) Regression strategy for model and prompt changes
+
+When changing prompts, model defaults, or Deep Agents usage:
+
+1. Run the evaluation dataset on baseline (`main`) and candidate versions.
+2. Compare escalation precision/recall, SAR quality, and latency/cost.
+3. Block promotion if high-risk recall drops or SAR quality regresses.
+4. Use trace diffs to pinpoint whether regressions come from enrichment, investigation, or compliance stages.
+
 ## Notes
 
 - For production, replace local JSON data sources with DynamoDB/OpenSearch/Neptune integrations.
