@@ -1,5 +1,10 @@
 # Fraud Detection & AML Agent
 
+AML stands for **Anti-Money Laundering**: controls and investigations that detect, assess, and escalate potentially illicit financial activity.
+SAR stands for **Suspicious Activity Report**: a formal compliance report filed when activity appears potentially linked to fraud, money laundering, or other financial crime.
+
+**Business problem (brief):** Financial institutions must detect suspicious activity early, reduce false positives, and produce auditable, regulator-ready case narratives (for example, SAR-style reporting) without slowing analyst operations.
+
 This sample implements:
 
 - Sequential workflow: monitor -> enrich -> investigate -> comply -> escalate
