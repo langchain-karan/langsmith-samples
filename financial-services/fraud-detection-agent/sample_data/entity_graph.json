@@ -2,9 +2,37 @@
   "CUST-001": [
     {"entity_id": "CUST-004", "flagged": false, "edge_type": "wire_transfer"},
     {"entity_id": "CUST-005", "flagged": false, "edge_type": "wire_transfer"},
-    {"entity_id": "CUST-006", "flagged": true, "edge_type": "wire_transfer"}
+    {"entity_id": "CUST-006", "flagged": true, "edge_type": "wire_transfer"},
+    {"entity_id": "CUST-007", "flagged": false, "edge_type": "invoice_payment"}
+  ],
+  "CUST-002": [
+    {"entity_id": "CUST-011", "flagged": false, "edge_type": "payroll"},
+    {"entity_id": "CUST-014", "flagged": false, "edge_type": "supplier_payment"}
   ],
   "CUST-004": [
-    {"entity_id": "CUST-001", "flagged": false, "edge_type": "wire_transfer"}
+    {"entity_id": "CUST-001", "flagged": false, "edge_type": "wire_transfer"},
+    {"entity_id": "CUST-007", "flagged": false, "edge_type": "invoice_payment"}
+  ],
+  "CUST-005": [
+    {"entity_id": "CUST-001", "flagged": false, "edge_type": "wire_transfer"},
+    {"entity_id": "CUST-010", "flagged": true, "edge_type": "trade_settlement"}
+  ],
+  "CUST-006": [
+    {"entity_id": "CUST-001", "flagged": false, "edge_type": "wire_transfer"},
+    {"entity_id": "CUST-010", "flagged": true, "edge_type": "beneficial_ownership_link"}
+  ],
+  "CUST-007": [
+    {"entity_id": "CUST-001", "flagged": false, "edge_type": "invoice_payment"},
+    {"entity_id": "CUST-004", "flagged": false, "edge_type": "invoice_payment"},
+    {"entity_id": "CUST-008", "flagged": false, "edge_type": "crypto_offramp"},
+    {"entity_id": "CUST-010", "flagged": true, "edge_type": "high_risk_corridor"}
+  ],
+  "CUST-008": [
+    {"entity_id": "CUST-007", "flagged": false, "edge_type": "crypto_onramp"},
+    {"entity_id": "CUST-012", "flagged": false, "edge_type": "asset_transfer"}
+  ],
+  "CUST-012": [
+    {"entity_id": "CUST-008", "flagged": false, "edge_type": "asset_transfer"},
+    {"entity_id": "CUST-010", "flagged": true, "edge_type": "cross_border_settlement"}
   ]
 }

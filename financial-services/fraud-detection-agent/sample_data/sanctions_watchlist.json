@@ -8,5 +8,25 @@
     "name": "Apex Maritime Ventures",
     "type": "sanctions",
     "source": "ofac_sdn"
+  },
+  {
+    "name": "Baltic Horizon Energy JSC",
+    "type": "sanctions",
+    "source": "eu_sanctions_consolidated"
+  },
+  {
+    "name": "Ivana Petrovic",
+    "type": "pep",
+    "source": "internal_pep_db"
+  },
+  {
+    "name": "Nexa Digital Assets Desk",
+    "type": "pep",
+    "source": "enhanced_due_diligence_list"
+  },
+  {
+    "name": "Qamar Exchange House",
+    "type": "sanctions",
+    "source": "uk_hmt_sanctions"
   }
 ]

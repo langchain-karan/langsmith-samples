@@ -1,0 +1,47 @@
+[
+  {
+    "transaction_id": "TX-LR-1001",
+    "account_id": "CUST-002",
+    "counterparty_id": "CUST-011",
+    "amount": 2100,
+    "currency": "USD",
+    "transaction_type": "ach",
+    "timestamp": "2026-02-14T10:05:00",
+    "channel": "online",
+    "location": "Chicago",
+    "metadata": {
+      "velocity_1h": 1,
+      "new_counterparty": false
+    }
+  },
+  {
+    "transaction_id": "TX-LR-1002",
+    "account_id": "CUST-002",
+    "counterparty_id": "CUST-014",
+    "amount": 1850,
+    "currency": "USD",
+    "transaction_type": "ach",
+    "timestamp": "2026-02-14T10:35:00",
+    "channel": "online",
+    "location": "Chicago",
+    "metadata": {
+      "velocity_1h": 1,
+      "new_counterparty": false
+    }
+  },
+  {
+    "transaction_id": "TX-LR-1003",
+    "account_id": "CUST-002",
+    "counterparty_id": "CUST-011",
+    "amount": 2250,
+    "currency": "USD",
+    "transaction_type": "ach",
+    "timestamp": "2026-02-14T11:10:00",
+    "channel": "online",
+    "location": "Chicago",
+    "metadata": {
+      "velocity_1h": 1,
+      "new_counterparty": false
+    }
+  }
+]

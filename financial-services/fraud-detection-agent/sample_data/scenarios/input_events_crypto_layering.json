@@ -1,0 +1,62 @@
+[
+  {
+    "transaction_id": "TX-CL-4001",
+    "account_id": "CUST-012",
+    "counterparty_id": "CUST-008",
+    "amount": 14750,
+    "currency": "USD",
+    "transaction_type": "crypto",
+    "timestamp": "2026-02-17T19:04:00",
+    "channel": "api",
+    "location": "digital-asset-exchange",
+    "metadata": {
+      "velocity_1h": 4,
+      "new_counterparty": false
+    }
+  },
+  {
+    "transaction_id": "TX-CL-4002",
+    "account_id": "CUST-012",
+    "counterparty_id": "CUST-010",
+    "amount": 14900,
+    "currency": "USD",
+    "transaction_type": "crypto",
+    "timestamp": "2026-02-17T19:16:00",
+    "channel": "api",
+    "location": "offshore-hub",
+    "metadata": {
+      "velocity_1h": 5,
+      "new_counterparty": true
+    }
+  },
+  {
+    "transaction_id": "TX-CL-4003",
+    "account_id": "CUST-012",
+    "counterparty_id": "CUST-007",
+    "amount": 13200,
+    "currency": "USD",
+    "transaction_type": "internal",
+    "timestamp": "2026-02-17T19:31:00",
+    "channel": "api",
+    "location": "internal-ledger",
+    "metadata": {
+      "velocity_1h": 6,
+      "new_counterparty": true
+    }
+  },
+  {
+    "transaction_id": "TX-CL-4004",
+    "account_id": "CUST-012",
+    "counterparty_id": "CUST-006",
+    "amount": 15100,
+    "currency": "USD",
+    "transaction_type": "wire",
+    "timestamp": "2026-02-17T19:47:00",
+    "channel": "mobile",
+    "location": "high-risk-jurisdiction",
+    "metadata": {
+      "velocity_1h": 7,
+      "new_counterparty": true
+    }
+  }
+]

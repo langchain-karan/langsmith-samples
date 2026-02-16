@@ -11,6 +11,30 @@
     "sanctions_match": false,
     "pep_match": false
   },
+  "CUST-002": {
+    "customer_id": "CUST-002",
+    "name": "Harbor Retail Co",
+    "account_type": "business",
+    "risk_rating": "low",
+    "kyc_status": "current",
+    "account_open_date": "2019-11-08",
+    "previous_alerts": 0,
+    "previous_sars": 0,
+    "sanctions_match": false,
+    "pep_match": false
+  },
+  "CUST-003": {
+    "customer_id": "CUST-003",
+    "name": "Maple Family Office",
+    "account_type": "personal",
+    "risk_rating": "medium",
+    "kyc_status": "current",
+    "account_open_date": "2020-05-21",
+    "previous_alerts": 1,
+    "previous_sars": 0,
+    "sanctions_match": false,
+    "pep_match": false
+  },
   "CUST-004": {
     "customer_id": "CUST-004",
     "name": "Northstar Trading",
@@ -46,5 +70,101 @@
     "previous_sars": 2,
     "sanctions_match": false,
     "pep_match": true
+  },
+  "CUST-007": {
+    "customer_id": "CUST-007",
+    "name": "Silverline Logistics FZE",
+    "account_type": "business",
+    "risk_rating": "high",
+    "kyc_status": "pending_refresh",
+    "account_open_date": "2024-07-29",
+    "previous_alerts": 5,
+    "previous_sars": 1,
+    "sanctions_match": false,
+    "pep_match": false
+  },
+  "CUST-008": {
+    "customer_id": "CUST-008",
+    "name": "Blue Dune General Trading",
+    "account_type": "business",
+    "risk_rating": "high",
+    "kyc_status": "current",
+    "account_open_date": "2022-02-12",
+    "previous_alerts": 2,
+    "previous_sars": 0,
+    "sanctions_match": false,
+    "pep_match": false
+  },
+  "CUST-009": {
+    "customer_id": "CUST-009",
+    "name": "North Pier Consulting",
+    "account_type": "business",
+    "risk_rating": "low",
+    "kyc_status": "current",
+    "account_open_date": "2018-06-06",
+    "previous_alerts": 0,
+    "previous_sars": 0,
+    "sanctions_match": false,
+    "pep_match": false
+  },
+  "CUST-010": {
+    "customer_id": "CUST-010",
+    "name": "Apex Maritime Ventures",
+    "account_type": "business",
+    "risk_rating": "sanctioned",
+    "kyc_status": "restricted",
+    "account_open_date": "2023-10-01",
+    "previous_alerts": 6,
+    "previous_sars": 3,
+    "sanctions_match": true,
+    "pep_match": false
+  },
+  "CUST-011": {
+    "customer_id": "CUST-011",
+    "name": "Riverbank Payroll Services",
+    "account_type": "business",
+    "risk_rating": "low",
+    "kyc_status": "current",
+    "account_open_date": "2017-09-18",
+    "previous_alerts": 0,
+    "previous_sars": 0,
+    "sanctions_match": false,
+    "pep_match": false
+  },
+  "CUST-012": {
+    "customer_id": "CUST-012",
+    "name": "Nexa Digital Assets Desk",
+    "account_type": "business",
+    "risk_rating": "high",
+    "kyc_status": "pending_refresh",
+    "account_open_date": "2025-01-19",
+    "previous_alerts": 3,
+    "previous_sars": 1,
+    "sanctions_match": false,
+    "pep_match": false
+  },
+  "CUST-013": {
+    "customer_id": "CUST-013",
+    "name": "Evergreen Aid Foundation",
+    "account_type": "nonprofit",
+    "risk_rating": "medium",
+    "kyc_status": "current",
+    "account_open_date": "2016-04-30",
+    "previous_alerts": 1,
+    "previous_sars": 0,
+    "sanctions_match": false,
+    "pep_match": false
+  },
+  "CUST-014": {
+    "customer_id": "CUST-014",
+    "name": "Metro Parts Wholesale",
+    "account_type": "business",
+    "risk_rating": "low",
+    "kyc_status": "current",
+    "account_open_date": "2020-08-03",
+    "previous_alerts": 0,
+    "previous_sars": 0,
+    "sanctions_match": false,
+    "pep_match": false
   }
 }

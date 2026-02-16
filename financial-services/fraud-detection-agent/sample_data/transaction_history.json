@@ -1,13 +1,36 @@
 [
-  {"transaction_id":"H-1","account_id":"CUST-001","amount":4200},
-  {"transaction_id":"H-2","account_id":"CUST-001","amount":3800},
-  {"transaction_id":"H-3","account_id":"CUST-001","amount":5000},
-  {"transaction_id":"H-4","account_id":"CUST-001","amount":4700},
-  {"transaction_id":"H-5","account_id":"CUST-001","amount":4500},
-  {"transaction_id":"H-6","account_id":"CUST-001","amount":4100},
-  {"transaction_id":"H-7","account_id":"CUST-001","amount":3900},
-  {"transaction_id":"H-8","account_id":"CUST-001","amount":4300},
-  {"transaction_id":"H-9","account_id":"CUST-001","amount":4600},
-  {"transaction_id":"H-10","account_id":"CUST-001","amount":4400},
-  {"transaction_id":"H-11","account_id":"CUST-009","amount":1200}
+  {"transaction_id": "H-0001", "account_id": "CUST-001", "amount": 4200},
+  {"transaction_id": "H-0002", "account_id": "CUST-001", "amount": 3800},
+  {"transaction_id": "H-0003", "account_id": "CUST-001", "amount": 5000},
+  {"transaction_id": "H-0004", "account_id": "CUST-001", "amount": 4700},
+  {"transaction_id": "H-0005", "account_id": "CUST-001", "amount": 4500},
+  {"transaction_id": "H-0006", "account_id": "CUST-001", "amount": 4100},
+  {"transaction_id": "H-0007", "account_id": "CUST-001", "amount": 3900},
+  {"transaction_id": "H-0008", "account_id": "CUST-001", "amount": 4300},
+  {"transaction_id": "H-0009", "account_id": "CUST-001", "amount": 4600},
+  {"transaction_id": "H-0010", "account_id": "CUST-001", "amount": 4400},
+
+  {"transaction_id": "H-0101", "account_id": "CUST-002", "amount": 1800},
+  {"transaction_id": "H-0102", "account_id": "CUST-002", "amount": 2200},
+  {"transaction_id": "H-0103", "account_id": "CUST-002", "amount": 2050},
+  {"transaction_id": "H-0104", "account_id": "CUST-002", "amount": 1900},
+  {"transaction_id": "H-0105", "account_id": "CUST-002", "amount": 2100},
+  {"transaction_id": "H-0106", "account_id": "CUST-002", "amount": 1750},
+
+  {"transaction_id": "H-0201", "account_id": "CUST-007", "amount": 9200},
+  {"transaction_id": "H-0202", "account_id": "CUST-007", "amount": 9800},
+  {"transaction_id": "H-0203", "account_id": "CUST-007", "amount": 8700},
+  {"transaction_id": "H-0204", "account_id": "CUST-007", "amount": 10100},
+  {"transaction_id": "H-0205", "account_id": "CUST-007", "amount": 9400},
+  {"transaction_id": "H-0206", "account_id": "CUST-007", "amount": 9900},
+
+  {"transaction_id": "H-0301", "account_id": "CUST-009", "amount": 1200},
+  {"transaction_id": "H-0302", "account_id": "CUST-009", "amount": 1300},
+  {"transaction_id": "H-0303", "account_id": "CUST-009", "amount": 1150},
+
+  {"transaction_id": "H-0401", "account_id": "CUST-012", "amount": 14500},
+  {"transaction_id": "H-0402", "account_id": "CUST-012", "amount": 13700},
+  {"transaction_id": "H-0403", "account_id": "CUST-012", "amount": 15100},
+  {"transaction_id": "H-0404", "account_id": "CUST-012", "amount": 14900},
+  {"transaction_id": "H-0405", "account_id": "CUST-012", "amount": 14200}
 ]
