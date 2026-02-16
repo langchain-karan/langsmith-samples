@@ -80,10 +80,18 @@ flowchart TD
 
 ## AWS Architecture Diagram
 
-![Fraud Detection AWS Architecture](../../generated-diagrams/fraud-detection-aws-architecture.png)
+![Fraud Detection AWS Architecture - Executive View](../../generated-diagrams/fraud-detection-aws-architecture-executive.png)
 
 Generated using `awslabs.aws-diagram-mcp-server`.
-This diagram follows the LangSmith AWS self-hosted reference pattern, with `LangSmith Deployments` and the `LangGraph` runtime inside the customer VPC, and direct per-agent calls from each LangGraph stage to Amazon Bedrock.
+This diagram now reflects a **full self-hosted LangSmith on AWS** pattern (not only deployments):
+
+- **LangSmith platform on EKS**: UI, API, backend services, observability, and evaluation/experiment workloads.
+- **LangSmith deployments data plane**: Agent Server/LangGraph runtime for fraud workflow execution.
+- **Platform datastores**: PostgreSQL (operational data), Redis (queue/cache), ClickHouse (traces/feedback), and S3 (artifacts).
+- **Per-agent Bedrock calls**: each LangGraph stage can call Amazon Bedrock directly based on model-routing policy.
+- **Observability and evaluations**: traces, feedback, and experiment outputs flow into LangSmith platform storage and UI.
+
+The structure aligns with LangChain documentation for self-hosted AWS architecture, observability, and evaluation models.
 It is structured against the AWS Well-Architected Framework pillars:
 
 - **Operational excellence**: CloudWatch and X-Ray for workload telemetry and run-time operations.
@@ -99,6 +107,9 @@ This sample executes locally, but each stage maps to AWS-native services for pro
 
 | Workflow Stage | Local Sample | AWS Service (Production) |
 | --- | --- | --- |
+| LangSmith platform (observability + evals) | Hosted LangSmith SaaS APIs | Self-hosted LangSmith UI/API/backend on Amazon EKS |
+| LangSmith platform storage | SaaS-managed stores | Amazon RDS (PostgreSQL), ElastiCache (Redis), ClickHouse, Amazon S3 |
+| LangSmith deployment control + runtime | Local process execution | LangSmith control plane + Agent Server data plane on EKS |
 | Streaming ingestion | `sample_data/input_events.json` | Amazon Kinesis Data Streams |
 | Anomaly scoring | Rule-based heuristic | Amazon SageMaker endpoint |
 | Customer enrichment | Local JSON lookup | Amazon DynamoDB |
