@@ -1,0 +1,47 @@
+[
+  {
+    "transaction_id": "TX-1001",
+    "account_id": "CUST-001",
+    "counterparty_id": "CUST-004",
+    "amount": 9600,
+    "currency": "USD",
+    "transaction_type": "wire",
+    "timestamp": "2026-02-14T09:10:00",
+    "channel": "online",
+    "location": "New York",
+    "metadata": {
+      "velocity_1h": 6,
+      "new_counterparty": true
+    }
+  },
+  {
+    "transaction_id": "TX-1002",
+    "account_id": "CUST-001",
+    "counterparty_id": "CUST-005",
+    "amount": 9800,
+    "currency": "USD",
+    "transaction_type": "wire",
+    "timestamp": "2026-02-14T09:30:00",
+    "channel": "online",
+    "location": "offshore-hub",
+    "metadata": {
+      "velocity_1h": 6,
+      "new_counterparty": true
+    }
+  },
+  {
+    "transaction_id": "TX-1003",
+    "account_id": "CUST-001",
+    "counterparty_id": "CUST-006",
+    "amount": 9700,
+    "currency": "USD",
+    "transaction_type": "wire",
+    "timestamp": "2026-02-14T09:45:00",
+    "channel": "mobile",
+    "location": "high-risk-jurisdiction",
+    "metadata": {
+      "velocity_1h": 7,
+      "new_counterparty": true
+    }
+  }
+]

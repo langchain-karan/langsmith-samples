@@ -30,9 +30,11 @@ This repository is built for teams moving from prototype to production. Each sam
 langsmith-samples/
 ├── supply-chain/
 │   └── supply-chain-optimization/   # Available now
-├── financial-services/              # Reserved for upcoming samples
-├── healthcare-life-sciences/        # Reserved for upcoming samples
-└── retail-ecommerce/                # Reserved for upcoming samples
+├── financial-services/              # Available now
+│   ├── document-research-agent/
+│   └── fraud-detection-agent/
+├── healthcare-life-sciences/        # Coming soon
+└── retail-ecommerce/                # Coming soon
 ```
 
 ## Samples
@@ -40,7 +42,7 @@ langsmith-samples/
 | Domain | Sample | Status | Description |
 | --- | --- | --- | --- |
 | Supply Chain | `supply-chain/supply-chain-optimization` | Available | Multi-agent optimization for demand forecasting, inventory, and logistics coordination. |
-| Financial Services | - | Coming soon | Planned examples for risk, operations, and customer workflows. |
+| Financial Services | `financial-services/document-research-agent`, `financial-services/fraud-detection-agent` | Available | Document research plus fraud detection/AML workflows with AWS mapping, Deep Agents options, risk scoring, and escalation. |
 | Healthcare & Life Sciences | - | Coming soon | Planned examples for care operations and decision support workflows. |
 | Retail & Ecommerce | - | Coming soon | Planned examples for planning, merchandising, and fulfillment workflows. |
 
@@ -70,6 +72,26 @@ python example.py
 ```
 
 For sample-specific details, see `supply-chain/supply-chain-optimization/README.md`.
+
+### Run Financial Services samples
+
+```bash
+# Use Case 1
+cd financial-services/document-research-agent
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+cp .env.example .env
+python run_demo.py --query "What changed in KYC onboarding requirements between 3.1 and 3.2?"
+
+# Use Case 2
+cd ../fraud-detection-agent
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+cp .env.example .env
+python run_demo.py
+```
 
 ## What You Can Learn from the Current Sample
 

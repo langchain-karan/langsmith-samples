@@ -1,0 +1,50 @@
+{
+  "CUST-001": {
+    "customer_id": "CUST-001",
+    "name": "Orion Imports LLC",
+    "account_type": "business",
+    "risk_rating": "medium",
+    "kyc_status": "current",
+    "account_open_date": "2021-03-10",
+    "previous_alerts": 3,
+    "previous_sars": 1,
+    "sanctions_match": false,
+    "pep_match": false
+  },
+  "CUST-004": {
+    "customer_id": "CUST-004",
+    "name": "Northstar Trading",
+    "account_type": "business",
+    "risk_rating": "high",
+    "kyc_status": "current",
+    "account_open_date": "2024-01-04",
+    "previous_alerts": 2,
+    "previous_sars": 0,
+    "sanctions_match": false,
+    "pep_match": false
+  },
+  "CUST-005": {
+    "customer_id": "CUST-005",
+    "name": "Atlas Shipping Group",
+    "account_type": "business",
+    "risk_rating": "high",
+    "kyc_status": "pending_refresh",
+    "account_open_date": "2025-02-18",
+    "previous_alerts": 1,
+    "previous_sars": 0,
+    "sanctions_match": false,
+    "pep_match": false
+  },
+  "CUST-006": {
+    "customer_id": "CUST-006",
+    "name": "Zenith Global Holdings",
+    "account_type": "business",
+    "risk_rating": "pep",
+    "kyc_status": "current",
+    "account_open_date": "2023-06-11",
+    "previous_alerts": 4,
+    "previous_sars": 2,
+    "sanctions_match": false,
+    "pep_match": true
+  }
+}

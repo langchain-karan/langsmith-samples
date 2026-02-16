@@ -4,11 +4,34 @@ Production-style AI workflow samples for banking, payments, insurance, and capit
 
 ## Status
 
-This vertical is currently being prepared. Samples will be added in upcoming releases.
+This vertical now includes runnable samples for document intelligence and fraud/AML workflows.
+
+## Shared Model Strategy
+
+Both use cases follow the same model-sizing preference:
+
+- Haiku for routing/fast classification
+- Sonnet 4.5 as the default reasoning model
+- Opus for highest-complexity/high-stakes synthesis
+- Optional Deep Agents pattern for complex multi-step reasoning
+
+## Available Sample
+
+### Use Case 1: Document Research Agent
+
+- Spec: `usecase1_document_research_agent.md`
+- Implementation: `document-research-agent/`
+- Run guide: `document-research-agent/README.md`
+
+### Use Case 2: Fraud Detection & AML Agent
+
+- Spec: `usecase2_fraud_detection_agent.md`
+- Implementation: `fraud-detection-agent/`
+- Run guide: `fraud-detection-agent/README.md`
 
 ## What to Expect
 
-Planned solution patterns include:
+Additional planned solution patterns include:
 
 - Customer operations copilots for service and case handling
 - Risk and fraud investigation workflows with human-in-the-loop review
@@ -23,6 +46,8 @@ Planned solution patterns include:
 
 ## Getting Started
 
-- Return to the repository root to view available samples today: `../README.md`
-- For a runnable reference implementation, start with the supply chain sample: `../supply-chain/supply-chain-optimization`
+- Start with this vertical's samples:
+  - `document-research-agent/README.md`
+  - `fraud-detection-agent/README.md`
+- Return to the repository root to view all domain samples: `../README.md`
 

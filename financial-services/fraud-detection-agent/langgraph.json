@@ -1,0 +1,9 @@
+{
+  "dependencies": [
+    "."
+  ],
+  "graphs": {
+    "fraud_detection": "src.graph:graph"
+  },
+  "env": ".env"
+}

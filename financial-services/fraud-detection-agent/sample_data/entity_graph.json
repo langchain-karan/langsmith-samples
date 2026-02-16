@@ -1,0 +1,10 @@
+{
+  "CUST-001": [
+    {"entity_id": "CUST-004", "flagged": false, "edge_type": "wire_transfer"},
+    {"entity_id": "CUST-005", "flagged": false, "edge_type": "wire_transfer"},
+    {"entity_id": "CUST-006", "flagged": true, "edge_type": "wire_transfer"}
+  ],
+  "CUST-004": [
+    {"entity_id": "CUST-001", "flagged": false, "edge_type": "wire_transfer"}
+  ]
+}

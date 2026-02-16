@@ -1,0 +1,12 @@
+[
+  {
+    "name": "Zenith Global Holdings",
+    "type": "pep",
+    "source": "internal_pep_db"
+  },
+  {
+    "name": "Apex Maritime Ventures",
+    "type": "sanctions",
+    "source": "ofac_sdn"
+  }
+]

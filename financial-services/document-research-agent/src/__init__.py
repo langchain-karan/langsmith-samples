@@ -1,0 +1,2 @@
+"""Document research agent package."""
+
