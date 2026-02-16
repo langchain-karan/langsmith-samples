@@ -1,4 +1,4 @@
-# LangSmith Samples
+<h1 align="center">LangSmith Samples</h1>
 
 <p align="center">
   <a href="./LICENSE"><img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License: MIT"></a>
@@ -8,7 +8,7 @@
   <a href="https://x.com/LangChainAI"><img src="https://img.shields.io/twitter/follow/LangChainAI?style=social" alt="Follow LangChain"></a>
 </p>
 
-Production-style sample projects that show how to build, operate, and evaluate AI workflows with LangSmith and LangChain.
+<p align="center">Production-style sample projects that show how to build, operate, and evaluate AI workflows with LangSmith and LangChain.</p>
 
 This repository is built for teams moving from prototype to production. Each sample models a real business workflow and demonstrates implementation patterns you can adapt to your own stack.
 
