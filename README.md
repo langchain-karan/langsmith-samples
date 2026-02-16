@@ -12,7 +12,7 @@
   <a href="https://github.com/langchain-karan/langsmith-samples/stargazers"><img src="https://img.shields.io/github/stars/langchain-karan/langsmith-samples?style=social" alt="GitHub stars"></a>
   <a href="https://github.com/langchain-karan/langsmith-samples/commits/main"><img src="https://img.shields.io/github/commit-activity/m/langchain-karan/langsmith-samples" alt="Commit activity"></a>
   <a href="https://github.com/langchain-karan/langsmith-samples/pulls"><img src="https://img.shields.io/github/issues-pr/langchain-karan/langsmith-samples" alt="Pull requests"></a>
-  <a href="https://x.com/LangChainAI"><img src="https://img.shields.io/twitter/follow/LangChainAI?style=social" alt="Follow LangChain"></a>
+  <a href="https://x.com/LangChain"><img src="https://img.shields.io/twitter/follow/LangChain?style=social" alt="Follow LangChain"></a>
 </p>
 
 <p align="center">Production-style sample projects that show how to build, operate, and evaluate AI workflows with LangSmith and LangChain.</p>
