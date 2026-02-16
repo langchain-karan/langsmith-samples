@@ -1,5 +1,10 @@
 # LangSmith Samples
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
+[![GitHub stars](https://img.shields.io/github/stars/langchain-karan/langsmith-samples?style=social)](https://github.com/langchain-karan/langsmith-samples/stargazers)
+[![PyPI Downloads](https://static.pepy.tech/badge/langchain)](https://pepy.tech/projects/langchain)
+[![Follow LangChain](https://img.shields.io/twitter/follow/LangChainAI?style=social)](https://x.com/LangChainAI)
+
 Production-style sample projects that show how to build, operate, and evaluate AI workflows with LangSmith and LangChain.
 
 This repository is built for teams moving from prototype to production. Each sample models a real business workflow and demonstrates implementation patterns you can adapt to your own stack.
