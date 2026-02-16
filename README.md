@@ -1,4 +1,10 @@
-<h1 align="center"><img src="assets/LangSmith-logo@2x.jpg" alt="LangSmith" height="36" style="vertical-align: middle;"></h1>
+<h1 align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/LangSmith-logo-white.png">
+    <source media="(prefers-color-scheme: light)" srcset="assets/LangSmith-logo.png">
+    <img src="assets/LangSmith-logo.png" alt="LangSmith" height="36" style="vertical-align: middle;">
+  </picture>
+</h1>
 <p align="center">Solution samples for industry verticals</p>
 
 <p align="center">
