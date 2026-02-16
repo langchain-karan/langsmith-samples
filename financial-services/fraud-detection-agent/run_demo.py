@@ -4,12 +4,10 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
+from datetime import date, datetime, time
 from pathlib import Path
 from typing import Any
-
-from src.graph import build_graph
-from src.state import FraudDetectionState, Transaction
-
 
 def _to_jsonable(value: Any) -> Any:
     if hasattr(value, "model_dump"):
@@ -18,6 +16,8 @@ def _to_jsonable(value: Any) -> Any:
         return {k: _to_jsonable(v) for k, v in value.items()}
     if isinstance(value, list):
         return [_to_jsonable(v) for v in value]
+    if isinstance(value, (datetime, date, time)):
+        return value.isoformat()
     return value
 
 
@@ -32,7 +32,9 @@ def parse_args() -> argparse.Namespace:
     return p.parse_args()
 
 
-def load_transactions(path: Path) -> list[Transaction]:
+def load_transactions(path: Path) -> list[Any]:
+    from src.state import Transaction
+
     rows = json.loads(path.read_text(encoding="utf-8"))
     return [Transaction(**row) for row in rows]
 
@@ -41,6 +43,13 @@ def main() -> None:
     args = parse_args()
     input_path = Path(args.input)
     txs = load_transactions(input_path)
+
+    # Keep --json output parseable by suppressing console alert side effects.
+    if args.json:
+        os.environ["ALERT_CHANNEL"] = "none"
+
+    from src.graph import build_graph
+    from src.state import FraudDetectionState
 
     app = build_graph()
     result = app.invoke(FraudDetectionState(transactions=txs))

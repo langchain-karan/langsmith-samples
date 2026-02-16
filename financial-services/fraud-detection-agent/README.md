@@ -13,6 +13,20 @@ This sample implements:
 - Full case state output for audit and testing
 - Optional Deep Agents path for complex investigation and SAR refinement
 
+## Prerequisites
+
+- Python `3.11` or `3.12` (recommended for dependency compatibility)
+- `pip` and virtual environment support (`python3 -m venv`)
+- Optional:
+  - Anthropic API key for live LLM responses
+  - LangSmith API key for trace upload and evaluation workflows
+
+Check your version:
+
+```bash
+python3 --version
+```
+
 ## Quick Start
 
 ```bash
@@ -23,6 +37,9 @@ pip install -r requirements.txt
 cp .env.example .env
 python run_demo.py
 ```
+
+By default, `.env.example` disables LangSmith upload (`LANGCHAIN_TRACING_V2=false`) so first runs stay local/noiseless.
+Enable tracing only after setting a valid `LANGCHAIN_API_KEY`.
 
 To enable Deep Agents path:
 
@@ -37,6 +54,8 @@ python run_demo.py
 python run_demo.py --json
 ```
 
+`--json` mode suppresses console alert printing by default so the output remains valid JSON.
+
 ## What to Expect When Setup Is Correct
 
 After setup is successful, a demo run should show these outcomes:
@@ -45,7 +64,7 @@ After setup is successful, a demo run should show these outcomes:
 - The run completes without import/config errors (for example, missing dependencies or invalid environment variables).
 - Console output includes a final case result with risk/escalation fields and SAR-style compliance narrative content.
 - `--json` mode returns structured output suitable for downstream automation and testing.
-- If `LANGSMITH_TRACING=true`, the run appears in your LangSmith project with stage-level trace spans for debugging and evaluation.
+- If `LANGCHAIN_TRACING_V2=true` and `LANGCHAIN_API_KEY` is valid, the run appears in your LangSmith project with stage-level trace spans for debugging and evaluation.
 - If `ENABLE_DEEPAGENTS=true`, investigation/compliance refinement paths are included in the run behavior.
 
 ### Quick Verification Checklist
@@ -66,7 +85,7 @@ Expected validation signals:
 - No startup/import errors.
 - Final output contains risk classification, escalation decision, and SAR-style narrative fields.
 - JSON output is parseable and includes full case state.
-- With tracing enabled, the run is visible in the `fraud-detection-agent` LangSmith project.
+- With `LANGCHAIN_TRACING_V2=true` and a valid `LANGCHAIN_API_KEY`, the run is visible in the `fraud-detection-agent` LangSmith project.
 
 ## Project Layout
 
@@ -116,7 +135,7 @@ flowchart TD
 
 ## AWS Architecture Diagram
 
-![Fraud Detection AWS Architecture - Executive View](../../generated-diagrams/fraud-detection-aws-architecture-executive.png)
+![Fraud Detection AWS Architecture - Executive View](./assets/fraud-detection-aws-architecture-executive.png)
 
 Generated using `awslabs.aws-diagram-mcp-server`.
 This diagram now reflects a **full self-hosted LangSmith on AWS** pattern (not only deployments):
@@ -175,9 +194,9 @@ Use LangSmith to monitor each fraud case end-to-end and measure whether escalati
 Set these variables before running:
 
 ```bash
-export LANGSMITH_TRACING=true
-export LANGSMITH_API_KEY=your_langsmith_api_key
-export LANGSMITH_PROJECT=fraud-detection-agent
+export LANGCHAIN_TRACING_V2=true
+export LANGCHAIN_API_KEY=your_langsmith_api_key
+export LANGCHAIN_PROJECT=fraud-detection-agent
 ```
 
 Then run the sample as usual:

@@ -107,7 +107,7 @@ Expected validation signals:
 
 ## AWS Architecture Diagram
 
-![Document Research AWS Architecture - Executive View](../../generated-diagrams/document-research-aws-architecture-executive.png)
+![Document Research AWS Architecture - Executive View](./assets/document-research-aws-architecture-executive.png)
 
 Generated using `awslabs.aws-diagram-mcp-server`.
 This diagram reflects a full self-hosted LangSmith-on-AWS style at high level:
