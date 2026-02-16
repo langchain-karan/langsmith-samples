@@ -1,4 +1,4 @@
-# Fraud Detection & AML Agent
+# Fraud Detection & Anti-Money Laundering (AML) Agent
 
 AML stands for **Anti-Money Laundering**: controls and investigations that detect, assess, and escalate potentially illicit financial activity.
 SAR stands for **Suspicious Activity Report**: a formal compliance report filed when activity appears potentially linked to fraud, money laundering, or other financial crime.
