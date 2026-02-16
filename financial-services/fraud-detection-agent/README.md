@@ -37,6 +37,37 @@ python run_demo.py
 python run_demo.py --json
 ```
 
+## What to Expect When Setup Is Correct
+
+After setup is successful, a demo run should show these outcomes:
+
+- The workflow executes end-to-end in order: `monitor -> enrich -> investigate -> comply -> escalate`.
+- The run completes without import/config errors (for example, missing dependencies or invalid environment variables).
+- Console output includes a final case result with risk/escalation fields and SAR-style compliance narrative content.
+- `--json` mode returns structured output suitable for downstream automation and testing.
+- If `LANGSMITH_TRACING=true`, the run appears in your LangSmith project with stage-level trace spans for debugging and evaluation.
+- If `ENABLE_DEEPAGENTS=true`, investigation/compliance refinement paths are included in the run behavior.
+
+### Quick Verification Checklist
+
+```bash
+# 1) Run the demo and verify workflow completion
+python run_demo.py
+
+# 2) Run structured mode and verify JSON output
+python run_demo.py --json
+
+# 3) (Optional) Verify Deep Agents path
+ENABLE_DEEPAGENTS=true python run_demo.py --json
+```
+
+Expected validation signals:
+
+- No startup/import errors.
+- Final output contains risk classification, escalation decision, and SAR-style narrative fields.
+- JSON output is parseable and includes full case state.
+- With tracing enabled, the run is visible in the `fraud-detection-agent` LangSmith project.
+
 ## Project Layout
 
 ```text
