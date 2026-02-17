@@ -19,7 +19,7 @@
 
 This repository is built for teams moving from prototype to production. Each sample models a real business workflow and demonstrates implementation patterns you can adapt to your own stack.
 
-## Documentation & SDK Links
+## 🔗 Documentation & SDK Links
 
 - LangChain docs: https://docs.langchain.com/oss/python/langchain/
 - LangChain Python API reference: https://reference.langchain.com/python/
@@ -28,27 +28,27 @@ This repository is built for teams moving from prototype to production. Each sam
 - Deep Agents Python API reference: https://reference.langchain.com/python/deepagents/
 - LangSmith docs: https://docs.smith.langchain.com/
 
-## Who This Is For
+## 👥 Who This Is For
 
 - **Engineering leaders** evaluating production patterns for AI systems
 - **Product and platform teams** aligning AI features with business KPIs
 - **Developers** who want runnable, domain-oriented reference implementations
 
-## What You Will Find Here
+## 📦 What You Will Find Here
 
 - End-to-end sample applications by industry/domain
 - LangGraph and LangChain orchestration patterns
 - Optional LangSmith tracing and observability setup
 - Runnable example code with local development instructions
 
-## Why These Samples Matter
+## 💡 Why These Samples Matter
 
 - Reduce time-to-first-production workflow with proven project scaffolding
 - Improve reliability with traceable execution and debugging via LangSmith
 - Demonstrate reusable patterns for multi-step and multi-agent systems
 - Connect technical implementation to business outcomes (speed, quality, cost)
 
-## Repository Layout
+## 🗂️ Repository Layout
 
 ```text
 langsmith-samples/
@@ -61,7 +61,7 @@ langsmith-samples/
 └── retail-ecommerce/                # Coming soon
 ```
 
-## Samples
+## 🧪 Samples
 
 | Domain | Sample | Status | Description |
 | --- | --- | --- | --- |
@@ -70,16 +70,16 @@ langsmith-samples/
 | Healthcare & Life Sciences | - | Coming soon | Planned examples for care operations and decision support workflows. |
 | Retail & Ecommerce | - | Coming soon | Planned examples for planning, merchandising, and fulfillment workflows. |
 
-## Quick Start
+## 🚀 Quick Start
 
-### Prerequisites
+### ✅ Prerequisites
 
 - Python 3.10 or newer
 - `pip`
 - An LLM API key (current sample uses Anthropic)
 - (Optional but recommended) LangSmith API key for traces
 
-### Run the Supply Chain sample
+### ⚙️ Run the Supply Chain sample
 
 ```bash
 cd supply-chain/supply-chain-optimization
@@ -97,7 +97,7 @@ python example.py
 
 For sample-specific details, see `supply-chain/supply-chain-optimization/README.md`.
 
-### Run Financial Services samples
+### 💳 Run Financial Services samples
 
 ```bash
 # Use Case 1
@@ -117,7 +117,7 @@ cp .env.example .env
 python run_demo.py
 ```
 
-## What You Can Learn from the Current Sample
+## 🎓 What You Can Learn from the Current Sample
 
 From `supply-chain/supply-chain-optimization`, you can learn how to:
 
@@ -127,7 +127,7 @@ From `supply-chain/supply-chain-optimization`, you can learn how to:
 - Stream workflow execution step-by-step for real-time visibility
 - Instrument end-to-end traces for operational monitoring
 
-## Configure LangSmith Tracing (Recommended)
+## 📈 Configure LangSmith Tracing (Recommended)
 
 Set these environment variables in your `.env` file to capture traces:
 
@@ -142,7 +142,7 @@ Learn more:
 - LangSmith docs: https://docs.smith.langchain.com/
 - LangSmith product overview: https://www.langchain.com/langsmith
 
-## How to Use These Samples
+## 🧭 How to Use These Samples
 
 - Start with one sample and run it unmodified
 - Map the sample architecture to your own system boundaries
@@ -151,7 +151,7 @@ Learn more:
 - Adapt schemas, prompts, and routing logic to your domain data
 - Define success metrics before extending a sample in production
 
-## Contributing
+## 🤝 Contributing
 
 Issues and pull requests are welcome. If you are proposing a new sample, include:
 
@@ -160,6 +160,6 @@ Issues and pull requests are welcome. If you are proposing a new sample, include
 - Setup instructions and runnable example inputs
 - Expected outputs and observability/tracing guidance
 
-## License
+## 📄 License
 
 This repository is licensed under the MIT License. See `LICENSE`.

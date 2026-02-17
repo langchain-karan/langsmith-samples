@@ -2,7 +2,7 @@
 
 This directory contains synthetic fraud/AML data used by the demo workflow.
 
-## Core files used by default run
+## 📁 Core files used by default run
 
 - `input_events.json`: baseline high-risk transaction batch for `run_demo.py`
 - `customers.json`: customer and counterparty KYC/risk profiles
@@ -10,7 +10,7 @@ This directory contains synthetic fraud/AML data used by the demo workflow.
 - `entity_graph.json`: relationship graph used for network-risk signals
 - `sanctions_watchlist.json`: sanctions and PEP reference list
 
-## Additional scenario inputs
+## 🧪 Additional scenario inputs
 
 You can run alternative datasets with:
 

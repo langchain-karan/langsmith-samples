@@ -12,7 +12,7 @@ This sample answers document-based financial operations/compliance questions wit
 - LangChain v1 + LangGraph v1 orchestration
 - Optional Deep Agents pattern for complex comparative/regulatory synthesis
 
-## Project Structure
+## 🗂️ Project Structure
 
 ```text
 document-research-agent/
@@ -28,7 +28,7 @@ document-research-agent/
     └── state.py
 ```
 
-## High-Level Architecture
+## 🏗️ High-Level Architecture
 
 ```mermaid
 flowchart TD
@@ -54,7 +54,7 @@ flowchart TD
 - Optional path: `Deep Agent for complex synthesis` when `ENABLE_DEEPAGENTS=true`
 - Model tiers: Haiku (routing), Sonnet 4.5 (default synthesis), Opus (highest complexity)
 
-## Quick Start
+## 🚀 Quick Start
 
 ```bash
 cd financial-services/document-research-agent
@@ -72,7 +72,7 @@ export ENABLE_DEEPAGENTS=true
 python run_demo.py --query "Compare policy changes across versions."
 ```
 
-## What to Expect When Setup Is Correct
+## ✅ What to Expect When Setup Is Correct
 
 After setup is successful, a run should show these outcomes:
 
@@ -82,7 +82,7 @@ After setup is successful, a run should show these outcomes:
 - Deep Agents behavior appears only when `ENABLE_DEEPAGENTS=true`.
 - If tracing is enabled, the run appears in your LangSmith project with stage-level trace visibility.
 
-### Quick Verification Checklist
+### 🔎 Quick Verification Checklist
 
 ```bash
 # 1) Run a baseline query
@@ -99,13 +99,13 @@ Expected validation signals:
 - Confidence/review gating output is present.
 - LangSmith traces are visible when `LANGSMITH_TRACING=true`.
 
-## Example Queries
+## ❓ Example Queries
 
 - `What changed in KYC onboarding requirements between 3.1 and 3.2?`
 - `What is required before escalating an AML alert?`
 - `Compare sanctions screening remediation expectations across policy and SOP guidance.`
 
-## AWS Architecture Diagram
+## ☁️ AWS Architecture Diagram
 
 ![Document Research AWS Architecture - Executive View](./assets/document-research-aws-architecture-executive.png)
 
@@ -117,7 +117,7 @@ This diagram reflects a full self-hosted LangSmith-on-AWS style at high level:
 - Core integrations to Amazon Bedrock and document services.
 - Security controls grouped separately (IAM/IRSA, KMS, Secrets Manager).
 
-## AWS Services Used (Reference Architecture)
+## 🧩 AWS Services Used (Reference Architecture)
 
 This sample runs locally by default, but it is designed to map directly to AWS-managed components for production workloads.
 
@@ -135,7 +135,7 @@ This sample runs locally by default, but it is designed to map directly to AWS-m
 | Monitoring/tracing | LangSmith | LangSmith + CloudWatch/X-Ray |
 | Secrets management | `.env` file | AWS Secrets Manager + IAM roles |
 
-## Recommended AWS Production Flow
+## 🛠️ Recommended AWS Production Flow
 
 1. Store source documents in Amazon S3.
 2. Parse PDFs/forms with Amazon Textract.
@@ -144,11 +144,11 @@ This sample runs locally by default, but it is designed to map directly to AWS-m
 5. Persist case metadata and decisions in DynamoDB.
 6. Route logs/metrics to CloudWatch and traces to LangSmith.
 
-## LangSmith Observability and Evaluations
+## 📈 LangSmith Observability and Evaluations
 
 Use LangSmith to monitor citation quality, response correctness, and review gating behavior over time.
 
-### 1) Enable tracing for this sample
+### 1) 🧪 Enable tracing for this sample
 
 ```bash
 export LANGSMITH_TRACING=true
@@ -156,7 +156,7 @@ export LANGSMITH_API_KEY=your_langsmith_api_key
 export LANGSMITH_PROJECT=document-research-agent
 ```
 
-### 2) What to inspect in traces
+### 2) 🔍 What to inspect in traces
 
 - Route decision correctness (query type and complexity path).
 - Retrieval quality (relevant chunks, citation coverage, and context construction).
@@ -171,7 +171,7 @@ Recommended trace metadata/tags:
 - `deepagents_enabled` (`true`/`false`)
 - `workflow_version`
 
-### 3) Build an evaluation dataset
+### 3) 🗃️ Build an evaluation dataset
 
 Include representative scenarios:
 
@@ -186,7 +186,7 @@ Store expected outcomes per example:
 - Expected review decision threshold behavior.
 - Expected failure-safe behavior when evidence is insufficient.
 
-### 4) Suggested evaluation metrics
+### 4) 📏 Suggested evaluation metrics
 
 - Citation correctness/coverage.
 - Answer factual accuracy against source text.
@@ -194,14 +194,14 @@ Store expected outcomes per example:
 - End-to-end latency and per-stage latency.
 - Token/cost per run by model tier.
 
-### 5) Regression strategy
+### 5) 🔁 Regression strategy
 
 1. Run baseline and candidate versions on the same dataset.
 2. Compare citation quality, factual accuracy, review-gate behavior, and latency/cost.
 3. Block promotion if citation grounding or risk controls regress.
 4. Use trace diffs to localize regressions to routing, retrieval, synthesis, or gating.
 
-## Notes
+## 📝 Notes
 
 - If `ANTHROPIC_API_KEY` is unset, the sample runs in deterministic fallback mode.
 - Model sizing strategy:

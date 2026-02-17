@@ -13,7 +13,7 @@ This sample implements:
 - Full case state output for audit and testing
 - Optional Deep Agents path for complex investigation and SAR refinement
 
-## Prerequisites
+## ✅ Prerequisites
 
 - Python `3.11` or `3.12` (recommended for dependency compatibility)
 - `pip` and virtual environment support (`python3 -m venv`)
@@ -27,7 +27,7 @@ Check your version:
 python3 --version
 ```
 
-## Quick Start
+## 🚀 Quick Start
 
 ```bash
 cd financial-services/fraud-detection-agent
@@ -48,7 +48,7 @@ export ENABLE_DEEPAGENTS=true
 python run_demo.py
 ```
 
-## Run With JSON Output
+## 🧾 Run With JSON Output
 
 ```bash
 python run_demo.py --json
@@ -56,7 +56,7 @@ python run_demo.py --json
 
 `--json` mode suppresses console alert printing by default so the output remains valid JSON.
 
-## What to Expect When Setup Is Correct
+## ✅ What to Expect When Setup Is Correct
 
 After setup is successful, a demo run should show these outcomes:
 
@@ -67,7 +67,7 @@ After setup is successful, a demo run should show these outcomes:
 - If `LANGCHAIN_TRACING_V2=true` and `LANGCHAIN_API_KEY` is valid, the run appears in your LangSmith project with stage-level trace spans for debugging and evaluation.
 - If `ENABLE_DEEPAGENTS=true`, investigation/compliance refinement paths are included in the run behavior.
 
-### Quick Verification Checklist
+### 🔎 Quick Verification Checklist
 
 ```bash
 # 1) Run the demo and verify workflow completion
@@ -87,7 +87,7 @@ Expected validation signals:
 - JSON output is parseable and includes full case state.
 - With `LANGCHAIN_TRACING_V2=true` and a valid `LANGCHAIN_API_KEY`, the run is visible in the `fraud-detection-agent` LangSmith project.
 
-## Project Layout
+## 🗂️ Project Layout
 
 ```text
 fraud-detection-agent/
@@ -104,7 +104,7 @@ fraud-detection-agent/
 └── run_demo.py
 ```
 
-## High-Level Architecture
+## 🏗️ High-Level Architecture
 
 ```mermaid
 flowchart TD
@@ -133,7 +133,7 @@ flowchart TD
 - Optional path: `Deep Agent refinement` in investigation/compliance when `ENABLE_DEEPAGENTS=true`
 - Model tiers: Haiku (escalation triage), Sonnet 4.5 (default drafting), Opus (high-risk drafting/refinement)
 
-## AWS Architecture Diagram
+## ☁️ AWS Architecture Diagram
 
 ![Fraud Detection AWS Architecture - Executive View](./assets/fraud-detection-aws-architecture-executive.png)
 
@@ -156,7 +156,7 @@ It is structured against the AWS Well-Architected Framework pillars:
 - **Cost optimization**: AWS Budgets to enforce spend controls for model and data services.
 - **Sustainability**: Compute Optimizer and elastic scaling to reduce over-provisioned resources.
 
-## AWS Services Used (Reference Architecture)
+## 🧩 AWS Services Used (Reference Architecture)
 
 This sample executes locally, but each stage maps to AWS-native services for production deployment.
 
@@ -176,7 +176,7 @@ This sample executes locally, but each stage maps to AWS-native services for pro
 | Compliance/audit persistence | In-memory state | Amazon DynamoDB + S3 |
 | Monitoring/tracing | Local logs + LangSmith | CloudWatch + LangSmith + X-Ray |
 
-## Recommended AWS Production Flow
+## 🛠️ Recommended AWS Production Flow
 
 1. Ingest transaction events via Kinesis.
 2. Score anomalies with SageMaker and enrich customer/counterparty context from DynamoDB/OpenSearch.
@@ -185,11 +185,11 @@ This sample executes locally, but each stage maps to AWS-native services for pro
 5. Publish high-risk alerts to SNS and drive approvals with Step Functions.
 6. Store case artifacts and SAR outputs in DynamoDB/S3 with CloudWatch observability.
 
-## LangSmith Observability and Evaluations
+## 📈 LangSmith Observability and Evaluations
 
 Use LangSmith to monitor each fraud case end-to-end and measure whether escalation and SAR outputs are improving over time.
 
-### 1) Enable tracing for this sample
+### 1) 🧪 Enable tracing for this sample
 
 Set these variables before running:
 
@@ -205,7 +205,7 @@ Then run the sample as usual:
 python run_demo.py --json
 ```
 
-### 2) What to inspect in traces
+### 2) 🔍 What to inspect in traces
 
 For each run, validate:
 
@@ -222,7 +222,7 @@ Recommended trace metadata/tags for filtering:
 - `deepagents_enabled` (`true`/`false`)
 - `workflow_version`
 
-### 3) Build an evaluation dataset for this use case
+### 3) 🗃️ Build an evaluation dataset for this use case
 
 Create a dataset of representative financial scenarios, for example:
 
@@ -237,7 +237,7 @@ Store expected outcomes per case:
 - Expected `escalation_required`
 - Expected SAR quality criteria (coverage of parties, timeline, and rationale)
 
-### 4) Suggested evaluation metrics
+### 4) 📏 Suggested evaluation metrics
 
 Track metrics that map to AML operations:
 
@@ -247,7 +247,7 @@ Track metrics that map to AML operations:
 - **Latency per stage** and **end-to-end runtime**
 - **Token/cost per run**, segmented by model tier
 
-### 5) Regression strategy for model and prompt changes
+### 5) 🔁 Regression strategy for model and prompt changes
 
 When changing prompts, model defaults, or Deep Agents usage:
 
@@ -256,7 +256,7 @@ When changing prompts, model defaults, or Deep Agents usage:
 3. Block promotion if high-risk recall drops or SAR quality regresses.
 4. Use trace diffs to pinpoint whether regressions come from enrichment, investigation, or compliance stages.
 
-## Notes
+## 📝 Notes
 
 - For production, replace local JSON data sources with DynamoDB/OpenSearch/Neptune integrations.
 - Model sizing strategy:

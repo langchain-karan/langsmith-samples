@@ -2,7 +2,7 @@
 
 A multi-agent system built with LangGraph for autonomous supply chain optimization, including demand forecasting, inventory management, and logistics optimization.
 
-## Architecture
+## 🏗️ Architecture
 
 This system implements a multi-agent architecture with the following components:
 
@@ -11,7 +11,7 @@ This system implements a multi-agent architecture with the following components:
 - **Logistics Agent**: Handles route optimization and real-time disruption detection
 - **Orchestration Agent**: Coordinates across all agents and resolves conflicts
 
-## Features
+## ✨ Features
 
 - Real-time demand forecasting with <15% MAPE target
 - Automated purchase order generation with supplier optimization
@@ -19,13 +19,13 @@ This system implements a multi-agent architecture with the following components:
 - Multi-echelon inventory optimization
 - Fresh/perishable goods handling with shelf-life awareness
 
-## Installation
+## 📦 Installation
 
 ```bash
 pip install -r requirements.txt
 ```
 
-## Configuration
+## ⚙️ Configuration
 
 Create a `.env` file with your API keys:
 
@@ -33,7 +33,7 @@ Create a `.env` file with your API keys:
 ANTHROPIC_API_KEY=your_key_here
 ```
 
-## Usage
+## 🚀 Usage
 
 ```python
 from supply_chain_agent import SupplyChainGraph
@@ -51,7 +51,7 @@ result = graph.run({
 
 See `example.py` for a complete usage example.
 
-## Requirements Met
+## ✅ Requirements Met
 
 - ✅ Demand forecasting at SKU-location-day granularity
 - ✅ Automated PO generation with supplier selection
@@ -61,7 +61,7 @@ See `example.py` for a complete usage example.
 - ✅ Scalable architecture supporting 1M+ SKUs
 - ✅ Integration-ready with standard APIs
 
-## Project Structure
+## 🗂️ Project Structure
 
 ```
 supply-chain-optimization/

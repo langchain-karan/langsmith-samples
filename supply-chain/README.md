@@ -2,9 +2,9 @@
 
 Production-style AI workflow samples for supply chain teams using LangSmith and LangChain.
 
-## Available Sample
+## 🧪 Available Sample
 
-### Supply Chain Optimization
+### 📦 Supply Chain Optimization
 
 Path: `supply-chain-optimization`
 
@@ -15,7 +15,7 @@ This sample demonstrates a multi-agent workflow for:
 - Logistics routing and disruption handling
 - End-to-end orchestration with optional LangSmith tracing
 
-## Run This Sample
+## 🚀 Run This Sample
 
 ```bash
 cd supply-chain-optimization
